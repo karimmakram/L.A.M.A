@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 export const Contianer = styled.div`
   height: 60px;
+  padding-bottom: 0.5rem;
 `
 export const Wrapper = styled.div`
   display: flex;
