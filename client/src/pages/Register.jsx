@@ -2,8 +2,10 @@ import styled from 'styled-components'
 const Component = styled.div`
 width: 100vw;
 height: 100vh;
-background: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) , black;
-backgeound-size:cover;
+background: linear-gradient(rgba(255,255,255,.5),rgba(255,255,255,.5)) , 
+    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      center;
+background-size:cover;
 display: flex;
 justify-content: center;
 align-items: center;
