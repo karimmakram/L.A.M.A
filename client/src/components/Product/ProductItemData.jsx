@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { Add, Remove } from '@material-ui/icons'
+import { mobile } from '../../responsive'
 const Wrapper=styled.div`
 display:flex;
 padding:3rem;
+${mobile({padding: ' 0.5rem',flexDirection:'column'})}
 `
 const ImageContainer=styled.div`
 flex:1;
@@ -11,16 +13,21 @@ const Image=styled.img`
 width:100%;
 height: 75vh;
 object-fit: cover;
+${mobile({height: '45vh'})}
+
 `
 const InfoContainer=styled.div`
 flex:1;
 padding:0 2rem;
+${mobile({padding: ' 0.5rem'})}
+
 `
 const Title=styled.h1`
 font-weight:300;
 `
 const Desc=styled.p`
 margin:1rem 0;
+${mobile({margin: ' 0.5rem 0'})}
 `
 const Price=styled.span`
 font-size:2rem;
@@ -32,6 +39,7 @@ width:50%;
 margin:1.5rem 0 ;
 display:flex;
 justify-content:space-between;
+${mobile({width: ' 100%'})}
 `
 const Filter =styled.div`
 display: flex;
@@ -44,6 +52,7 @@ border-radius: 50%;
 background-color:${props=>props.color};
 margin-left:0.5rem;
 cursor: pointer;
+${mobile({width: ' 1.5rem',height:'1.5rem'})}
 `
 const FilterTitle =  styled.span`
 font-size:1.2rem;
@@ -52,6 +61,7 @@ font-weight:300;
 const FilterSize =  styled.select`
 margin-left:0.5rem;
 padding:0.25rem;
+${mobile({padding: ' 0.75rem'})}
 `
 const FilterSizeOption = styled.option``
 
@@ -60,6 +70,7 @@ width:50%;
 display: flex;
 align-items: center;
 justify-content: space-between;
+${mobile({width: ' 100%'})}
 `
 
 const AmountContainer = styled.div`
@@ -70,8 +81,8 @@ font-weight:700;
 
 const Amount = styled.span`
 width:2rem;
-geight:2rem;
-border:radius:0.5rem;
+height:2rem;
+border-radius:0.5rem;
 display: flex;
 justify-content: center;
 align-items: center;

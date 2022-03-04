@@ -4,6 +4,7 @@ import Announmouse from '../components/Layout/Announmouse'
 import Footer from '../components/Layout/Footer'
 import NewsLetter from '../components/Home/NewsLetter'
 import Products from '../components/Home/Products'
+import { mobile } from '../responsive'
 
 
 
@@ -17,10 +18,11 @@ justify-content: space-between;
 `
 const Filter = styled.div`
 margin:1rem;
+${mobile({margin: '0 1rem',display: 'flex',flexDirection: 'column',gap: '0.5rem'})}
 `
 const FiltreText=styled.span`
 font-size:1.2rem;
-font-weight:600;
+font-weight:600; 
 margin-right:1rem;
 `
 const Select = styled.select`

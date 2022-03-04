@@ -1,8 +1,10 @@
 import { Facebook, Instagram, LinkedIn, MailOutline, Phone, Room, Twitter } from "@material-ui/icons"
 import styled from "styled-components"
+import { mobile } from "../../responsive"
 
 const Container = styled.div`
 display:flex;
+${mobile({flexDirection: 'column'})}
 `
 const Left = styled.div`
 flex:1;
@@ -10,12 +12,15 @@ display: flex;
 flex-direction: column;
 padding:1rem;
 `
-const Logo = styled.h1``
+const Logo = styled.h1`
+${mobile({textAlign: 'center'})}
+`
 const Desc = styled.p`
     margin:1rem 0 ;
 `
 const SocialContianer=styled.div`
     display:flex;
+    ${mobile({justifyContent: 'center'})}
 `
 const SocialIcon=styled.div`
     height:2.5rem;
@@ -27,17 +32,18 @@ const SocialIcon=styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right:1rem
+    margin-right:1rem;
 `
 
 
 const Center = styled.div`
 flex:1;
 padding:1rem;
-
+${mobile({display: 'none'})}
 `
 const Title=styled.h3`
 margin-bottom:1.5rem;
+${mobile({textAlign: 'center'})}
 `
 const List = styled.ul`
 margin:0;
@@ -57,10 +63,11 @@ const ListItem = styled.li`
 const Right = styled.div`
 flex:1;
 padding:1rem;
+${mobile({backgroundColor: '#fff8f8'})}
 `
 const ContactItem=styled.div`
 display:flex;
-align-item:center;
+align-items:center;
 margin-bottom:0.8rem;
 `
 const Payment = styled.img`

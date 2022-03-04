@@ -3,12 +3,14 @@ import Navbar from '../components/Layout/Navbar'
 import Announmouse from '../components/Layout/Announmouse' 
 import Footer from '../components/Layout/Footer'
 import { Add, Remove } from "@material-ui/icons"
+import { mobile } from "../responsive"
 
 
 const Container = styled.div`
 `
 const Wrapper = styled.div`
 padding: 1.25rem;
+${mobile({padding: ' 0.5rem'})}
 `
 const Title = styled.h1`
 font-weight: 300;
@@ -28,7 +30,9 @@ border:${props=>props.type==="filled"&&"none"};
 background-color:${props=>props.type==="filled"?"black":"transparent"};
 color:${props=>props.type==="filled"&&"white"};
 `
-const TopContent = styled.div``
+const TopContent = styled.div`
+${mobile({display: ' none'})}
+`
 const TopText = styled.span`
 text-decoration: underline;
 cursor: pointer;
@@ -38,6 +42,7 @@ margin:0 0.8rem;
 const Bottom = styled.div`
 display: flex;
 justify-content: space-between;
+${mobile({flexDirection: ' column'})}
 `
 const Info = styled.div`
 flex: 3;
@@ -45,6 +50,7 @@ flex: 3;
 const Product = styled.div`
 display: flex;
 justify-content: space-between;
+${mobile({flexDirection: ' column'})}
 `
 const ProductDetail = styled.div`
 flex: 2;
@@ -83,10 +89,12 @@ margin-bottom: 1rem;
 const ProductAmount = styled.div`
 font-size: 1.5rem;
 margin: 0.25rem;
+${mobile({margin: ' 0.25rem 1rem',border: '1px solid teal',padding:' 0.5rem'})}
 `
 const ProductPrice = styled.div`
 font-size: 2rem;
 font-weight: 200;
+${mobile({marginBottom: ' 1rem'})}
 `
 
 const Hr = styled.hr`
